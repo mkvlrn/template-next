@@ -2,5 +2,4 @@
 export default {
   distDir: 'dist',
   cleanDistDir: true,
-  output: 'export',
 };
