@@ -12,18 +12,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "outDir": "dist",
-    "paths": {
-      "#/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "paths": { "~/*": ["./src/*"], "public/*": ["./public/*"] },
+    "plugins": [{ "name": "next" }],
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,
