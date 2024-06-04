@@ -16,13 +16,13 @@
   ],
   "scripts": {
     "test": "vitest --run",
-    "test:cov": "rm -rf coverage && vitest run --coverage",
+    "test:cov": "rimraf coverage && vitest run --coverage",
     "prepare": "husky",
     "dev": "next dev",
     "lint": "eslint src --fix",
     "format": "prettier --write src",
     "type-check": "tsc --noEmit",
-    "build": "rm -rf dist && NODE_ENV=production next build",
+    "build": "rimraf dist && NODE_ENV=production next build",
     "start": "NODE_ENV=production next start"
   },
   "devDependencies": {
