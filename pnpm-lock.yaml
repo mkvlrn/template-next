@@ -25,8 +25,8 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@mkvlrn/eslint-config':
-        specifier: ^24.6.3
-        version: 24.6.3(@typescript-eslint/parser@7.12.0(eslint@9.4.0)(typescript@5.4.5))(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(jsdom@24.1.0))
+        specifier: ^24.6.5
+        version: 24.6.5(@typescript-eslint/parser@7.12.0(eslint@9.4.0)(typescript@5.4.5))(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(jsdom@24.1.0))
       '@mkvlrn/prettier-config':
         specifier: ^24.6.1
         version: 24.6.1
@@ -443,8 +443,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mkvlrn/eslint-config@24.6.3':
-    resolution: {integrity: sha512-1+ff9CoNciZWE2qeRnUii1G3XY/cwV4Z7/ZPfVBZ23q5smoGhklG5O1bOvGdWVtJFB7hiM8vdG07UM1rndcRIQ==}
+  '@mkvlrn/eslint-config@24.6.5':
+    resolution: {integrity: sha512-jOc2VkjF1DKG47XyFZMMRbBdrl22MNJ8nzR1+mLBoOTn0UAUZSyGvQ498xFO0Wz8XH2gVzCHgdq/gv0Pgvgafw==}
 
   '@mkvlrn/prettier-config@24.6.1':
     resolution: {integrity: sha512-aRuTrhYTVRnlkt4jY88lQEQnCajNrLWqrffMZpCvyRD3TrU0UwhtRzUoYl8p9U0Buk+2V2T5YhNba6y2lEl+rg==}
@@ -3400,7 +3400,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@mkvlrn/eslint-config@24.6.3(@typescript-eslint/parser@7.12.0(eslint@9.4.0)(typescript@5.4.5))(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(jsdom@24.1.0))':
+  '@mkvlrn/eslint-config@24.6.5(@typescript-eslint/parser@7.12.0(eslint@9.4.0)(typescript@5.4.5))(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(jsdom@24.1.0))':
     dependencies:
       '@eslint/js': 9.4.0
       '@next/eslint-plugin-next': 14.2.3

@@ -6,7 +6,7 @@ vi.mock('next/font/google', () => ({
   Inter: () => ({ className: 'mocked-inter' }),
 }));
 
-test('RootLayout renders children correctly', async () => {
+test('RootLayout renders children correctly', () => {
   render(<RootLayout>Test Child</RootLayout>);
 
   const childElement = screen.getByText('Test Child');
