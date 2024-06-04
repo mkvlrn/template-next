@@ -2,4 +2,5 @@
 export default {
   distDir: 'dist',
   cleanDistDir: true,
+  reactStrictMode: true,
 };
