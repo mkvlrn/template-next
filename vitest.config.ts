@@ -6,15 +6,19 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
     coverage: {
-      reportsDirectory: 'coverage',
-      reporter: ['lcov', 'html', 'text'],
+      reportsDirectory: `coverage`,
+      reporter: [`lcov`, `html`, `text`],
       all: true,
-      include: ['src'],
-      exclude: ['**/*.{test,spec}.?(c|m)[jt]s?(x)', '**/*.d.ts', 'src/index.ts?(x)'],
+      include: [`src`],
+      exclude: [
+        `**/*.{test,spec}.?(c|m)[jt]s?(x)`,
+        `**/*.d.ts`,
+        `src/index.ts?(x)`,
+      ],
     },
-    env: { NODE_ENV: 'test' },
-    environment: 'jsdom',
+    env: { NODE_ENV: `test` },
+    environment: `jsdom`,
     passWithNoTests: true,
-    setupFiles: ['vitest.setup.ts'],
+    setupFiles: [`vitest.setup.ts`],
   },
 });
