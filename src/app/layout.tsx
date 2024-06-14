@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '~/app/globals.css';
 
-const inter = Inter({ subsets: [`latin`] });
+// this is needed for now, https://github.com/vercel/next.js/issues/63041
+// eslint-disable-next-line quotes
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: `Next App`,
