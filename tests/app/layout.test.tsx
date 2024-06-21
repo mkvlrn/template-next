@@ -1,14 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import { expect, test, vi } from 'vitest';
-import RootLayout from '~/app/layout.tsx';
+import { render, screen } from "@testing-library/react";
+import { expect, test, vi } from "vitest";
+import RootLayout from "~/app/layout.tsx";
 
-vi.mock(`next/font/google`, () => ({
-  Inter: () => ({ className: `mocked-inter` }),
+vi.mock("next/font/google", () => ({
+  Inter: () => ({ className: "mocked-inter" }),
 }));
 
-test(`RootLayout renders children correctly`, () => {
+test("RootLayout renders children correctly", () => {
   render(<RootLayout>Test Child</RootLayout>);
 
-  const childElement = screen.getByText(`Test Child`);
+  const childElement = screen.getByText("Test Child");
   expect(childElement).toBeInTheDocument();
 });

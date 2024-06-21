@@ -1,2 +1,1 @@
-// eslint-disable-next-line quotes
-declare module '*.css';
+declare module "*.css";
