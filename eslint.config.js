@@ -1,1 +1,1 @@
-export { default } from "@mkvlrn/eslint-config/next.js";
+export { next as default } from "@mkvlrn/eslint-config";
