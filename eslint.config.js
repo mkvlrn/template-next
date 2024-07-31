@@ -1,1 +1,8 @@
-export { next as default } from "@mkvlrn/eslint-config";
+import { next } from "@mkvlrn/eslint-config";
+
+export default [
+  ...next,
+  {
+    ignores: ["dist"],
+  },
+];
