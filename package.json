@@ -31,8 +31,6 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@mkvlrn/eslint-config": "^24.8.3",
     "@mkvlrn/prettier-config": "^24.8.0",
-    "@next/eslint-plugin-next": "^14.2.5",
-    "@swc/plugin-transform-imports": "^2.0.10",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
