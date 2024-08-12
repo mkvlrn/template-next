@@ -27,7 +27,7 @@
     "start": "NODE_ENV=production next start"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@mkvlrn/eslint-config": "^24.8.3",
     "@mkvlrn/prettier-config": "^24.8.0",
