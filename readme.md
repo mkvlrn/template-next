@@ -4,4 +4,4 @@
 
 A sane, opinionated template for nextjs projects.
 
-Uses typescript, eslint, prettier, commitlint, vitest, lint-staged, husky, swc, and more.
+Uses typescript, eslint, prettier, commitlint, vitest, lint-staged, husky, and more.

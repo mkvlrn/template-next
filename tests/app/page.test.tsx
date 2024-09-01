@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
-import Home from "~/app/page.tsx";
+import Home from "~/app/page.jsx";
 
 test("Home component renders correctly", () => {
   render(<Home />);
