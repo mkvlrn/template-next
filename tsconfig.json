@@ -1,32 +1,8 @@
 {
+  "extends": "@mkvlrn/tsconfig/tsconfig.next.json",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
+    "rootDir": "./",
     "baseUrl": "./",
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "noEmit": true,
-    "outDir": "./dist",
-    "paths": {
-      "~/*": ["./src/*"],
-      "#/*": ["./tests/*"],
-      "public/*": ["./public/*"]
-    },
-    "plugins": [{ "name": "next" }],
-    "preserveSymlinks": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "rootDir": ".",
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext"
+    "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] }
   }
 }

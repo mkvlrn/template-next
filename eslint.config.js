@@ -1,8 +1,8 @@
-import { next } from "@mkvlrn/eslint-config";
+import { next } from "@mkvlrn/eslint";
 
 export default [
   ...next,
   {
-    ignores: ["dist"],
+    ignores: ["dist", "node_modules"],
   },
 ];
