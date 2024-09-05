@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 export default {
-  distDir: "dist",
+  distDir: "./dist",
   cleanDistDir: true,
   reactStrictMode: true,
   output: "export",
