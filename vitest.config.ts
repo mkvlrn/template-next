@@ -6,9 +6,11 @@ export default defineConfig({
   plugins: [react.default(), tsconfigPaths()],
   test: {
     coverage: {
+      all: true,
+      clean: true,
+      cleanOnRerun: true,
       reportsDirectory: "coverage",
       reporter: ["lcov", "html", "text"],
-      all: true,
       include: ["src"],
     },
     env: { NODE_ENV: "test" },
