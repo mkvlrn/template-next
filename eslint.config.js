@@ -1,5 +1,6 @@
 import { next } from "@mkvlrn/eslint";
 
+/** @type {import("typescript-eslint").ConfigWithExtends[]} */
 export default [
   ...next,
   {
