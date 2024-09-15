@@ -1,11 +1,24 @@
 {
-  "extends": "@mkvlrn/tsconfig/tsconfig.next.json",
+  "extends": "@mkvlrn/configurations/tsconfig-next",
   "compilerOptions": {
     "rootDir": "./",
     "outDir": "./dist",
     "baseUrl": "./",
-    "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] }
+    "paths": {
+      "~/*": ["./src/*"],
+      "#/*": ["./tests/*"]
+    }
   },
-  "include": ["next-env.d.ts", "./dist/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "./dist/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "*.config.js",
+    "*.config.ts",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

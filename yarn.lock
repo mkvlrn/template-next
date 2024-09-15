@@ -647,13 +647,14 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mkvlrn/eslint@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint/-/eslint-0.1.6.tgz#a74aa38bdff493c0d75510b9c27ca0c382940d61"
-  integrity sha512-RxxZpjkx++9m2Jwk5QPr4nkHMC0oc6HJLl0TPmMEkyIcyW07hA8T7kPz7otmoizCv++US7q2sun9nh9YL9Tf6g==
+"@mkvlrn/configurations@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/configurations/-/configurations-1.0.1.tgz#7f6ee2b7769c18a0fc20ece88c4ddd22107f024a"
+  integrity sha512-DYoeE/2X5PvNhSxpoVBlD67f9fo0HQ66Mnb0GdejSI1M0pRLKxKg26XeFPop6zOeksMmVZbp3tQ/yCl/r011pQ==
   dependencies:
     "@eslint/js" "^9.10.0"
     "@next/eslint-plugin-next" "^14.2.11"
+    "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     eslint-config-prettier "^9.1.0"
     eslint-import-resolver-typescript "^3.6.3"
     eslint-plugin-import "^2.30.0"
@@ -661,20 +662,8 @@
     eslint-plugin-react-hooks "^4.6.2"
     eslint-plugin-unicorn "^55.0.0"
     eslint-plugin-vitest "^0.5.4"
-    typescript-eslint "^8.5.0"
-
-"@mkvlrn/prettier@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier/-/prettier-0.0.5.tgz#d818179ca668e3faf1634d40c64652ea9279a22b"
-  integrity sha512-fqEiOOF4UUC8z0i435TKo/Ro+O+iPjwmlObRfBfMV8AXyftLXg/uUV48tjfLdNVT8/lV4iSkoVRJMtp+sgyFYg==
-  dependencies:
-    "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier-plugin-tailwindcss "^0.6.6"
-
-"@mkvlrn/tsconfig@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/tsconfig/-/tsconfig-0.1.0.tgz#62aa71bc49e8551ed2be1d675c840fea438bc9d4"
-  integrity sha512-Fm+vdhjIAS3SUXAP4LzKpIAUg8KDvPfegBH08CSoVYA3RLepphFb2BL2NUpDA5kXnXKr3mpFJz/AAhWkiJ0rGg==
+    typescript-eslint "^8.5.0"
 
 "@next/env@14.2.11":
   version "14.2.11"
