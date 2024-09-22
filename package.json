@@ -21,8 +21,8 @@
     "dev": "next dev",
     "lint": "eslint --fix src tests",
     "format": "prettier --write src tests",
-    "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production next start"
+    "build": "next build",
+    "start": "next start"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
