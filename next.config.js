@@ -3,5 +3,5 @@ export default {
   distDir: "./dist",
   cleanDistDir: true,
   reactStrictMode: true,
-  output: "export",
+  output: "standalone",
 };
