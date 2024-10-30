@@ -1,0 +1,21 @@
+{
+  "extends": "@mkvlrn/config/tsconfig-next",
+  "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": { "~/*": ["./src/*"], "#/*": ["./test/*"], "public/*": ["./public/*"] },
+    "types": ["@testing-library/jest-dom"]
+  },
+  "include": [
+    "./.next/types/**/*.ts",
+    "./*.config.js",
+    "./*config.ts",
+    "./dist/types/**/*.ts",
+    "./next-env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
