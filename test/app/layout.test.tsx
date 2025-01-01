@@ -3,7 +3,10 @@ import { describe, expect, test, vi } from "vitest";
 import RootLayout from "~/app/layout";
 
 vi.mock("next/font/google", () => ({
-  Inter: () => ({ className: "mocked-inter" }),
+  // biome-ignore lint/style/useNamingConvention: comes from google fonts
+  Geist: () => ({ className: "mocked-geist" }),
+  // biome-ignore lint/style/useNamingConvention: comes from google fonts
+  Geist_Mono: () => ({ className: "mocked-geist-mono" }),
 }));
 
 describe("RootLayout", () => {

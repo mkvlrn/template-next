@@ -1,6 +1,6 @@
 {
   "name": "template-next",
-  "description": "A template for Next.js projects",
+  "description": "A esm template for Next.js projects",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -10,49 +10,52 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-next"
   },
-  "keywords": [
-    "nextjs",
-    "esm",
-    "template"
-  ],
+  "keywords": ["nextjs", "esm", "template"],
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "start": "next start",
-    "test": "vitest --run",
-    "test:cov": "vitest run --coverage",
-    "lint": "eslint --fix \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
-    "format": "prettier --write src test",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky"
+    "swc": "node --import @swc-node/register/esm-register",
+    "build": "npx next build",
+    "dev": "npx next dev",
+    "start": "npx next start",
+    "test": "npm run swc -- scripts/test.ts",
+    "test:cov": "npm run swc -- scripts/test.ts --coverage",
+    "tidy": "npm run swc -- scripts/tidy.ts",
+    "typecheck": "npx tsc --noEmit",
+    "prepare": "npx husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@mkvlrn/config": "^1.0.4",
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@swc-node/register": "^1.10.9",
+    "@swc/cli": "^0.5.2",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.2",
-    "@testing-library/react": "^16.0.1",
-    "@types/node": "^22.8.4",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^3.7.1",
-    "@vitest/coverage-v8": "^2.1.4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.3",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "@vitest/coverage-v8": "^2.1.8",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.13.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "jsdom": "^25.0.1",
-    "lint-staged": "^15.2.10",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3",
-    "vite-tsconfig-paths": "^5.0.1",
-    "vitest": "^2.1.4"
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
   },
   "dependencies": {
-    "next": "^15.0.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "next": "^15.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {}
+    }
   }
 }
