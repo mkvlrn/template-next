@@ -12,13 +12,11 @@
   },
   "keywords": ["nextjs", "esm", "template"],
   "scripts": {
-    "swc": "node --import @swc-node/register/esm-register",
     "build": "npx next build",
     "dev": "npx next dev",
     "start": "npx next start",
-    "test": "npm run swc -- scripts/test.ts",
-    "test:cov": "npm run swc -- scripts/test.ts --coverage",
-    "tidy": "npm run swc -- scripts/tidy.ts",
+    "test": "npx vitest run",
+    "tidy": "npx biome check --write --no-errors-on-unmatched",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
   },
@@ -49,13 +47,5 @@
     "next": "^15.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
-  },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {}
-    }
   }
 }
