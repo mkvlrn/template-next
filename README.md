@@ -4,6 +4,13 @@ A sane, opinionated template for esm nextjs projects written in typescript.
 
 Uses biome, vitest, husky.
 
+## why use this instead of nextjs-cli?
+
+- biome is a linter/formatter running on git hooks (pre-commit, pre-push)
+- vitest as a test runner
+
+Aside from that, does what the cli does.
+
 ## running
 
 ### `yarn dev`
