@@ -17,17 +17,14 @@
     "noEmit": true,
     "paths": {
       "~/*": ["./src/*"],
+      "🧪/*": ["./test/*"],
       "public/*": ["./public/*"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "rootDir": "./",
+    "rootDir": ".",
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
