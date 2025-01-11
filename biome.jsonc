@@ -16,12 +16,16 @@
     "formatWithErrors": true
   },
   "organizeImports": {
-    "enabled": true
+    "enabled": false
   },
   "linter": {
     "enabled": true,
     "rules": {
       "all": true,
+      "complexity": {
+        // this goes against typescript's noPropertyAccessFromIndexSignature
+        "useLiteralKeys": "off"
+      },
       "style": {
         // pretty much everything is a default export in next, so yeah
         "noDefaultExport": "off"
