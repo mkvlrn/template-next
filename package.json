@@ -12,13 +12,14 @@
   },
   "keywords": ["nextjs", "esm", "template"],
   "scripts": {
-    "build": "npx next build",
-    "dev": "npx next dev",
-    "start": "npx next start",
-    "test": "npx vitest run",
-    "tidy": "npx biome check --write --no-errors-on-unmatched",
-    "typecheck": "npx tsc --noEmit",
-    "prepare": "npx husky"
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "test": "vitest run",
+    "test:integration": "vitest",
+    "test:e2e": "vitest",
+    "tidy": "biome check --fix --no-errors-on-unmatched",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
