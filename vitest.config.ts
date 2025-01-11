@@ -1,10 +1,10 @@
+import react from "@vitejs/plugin-react-swc";
 // biome-ignore lint/correctness/noNodejsModules: cli
 import { readdir } from "node:fs/promises";
 // biome-ignore lint/correctness/noNodejsModules: cli
 import { resolve } from "node:path";
-import react from "@vitejs/plugin-react-swc";
-import { defineConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
 const validTestScripts = ["test", "test:integration", "test:e2e"];
 
@@ -40,6 +40,8 @@ try {
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
+    // this is based on what kind of tests are being run, defaults to unit tests
+    include: [`./${testScript}/**/*.test.{ts,tsx}`],
     reporters: ["verbose"],
     coverage: {
       all: true,
@@ -53,6 +55,6 @@ export default defineConfig({
     env: { NODE_ENV: "test" },
     environment: "jsdom",
     passWithNoTests: true,
-    setupFiles: ["./vitest.setup.ts"],
+    setupFiles,
   },
 });
