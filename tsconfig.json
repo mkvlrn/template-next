@@ -3,10 +3,8 @@
   "compilerOptions": {
     // no emit by default
     "noEmit": true,
-
     // remove comments from output
     "removeComments": true,
-
     // the stricter, the better
     // https://whatislove.dev/articles/the-strictest-typescript-config/
     "allowJs": false,
@@ -15,44 +13,43 @@
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "strictNullChecks": true,
-
     // esm
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "target": "esnext",
-
     // follow esm conventions
     // tsc-alias needs outDir to be set
     "moduleDetection": "force",
     "moduleResolution": "bundler",
     "outDir": "./build",
-
     // paths for imports
     // 🧪 is neat, don't be a hater
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
+    "paths": {
+      "~/*": ["./src/*"],
+      "🧪/*": ["./test/*"]
+    },
     "rootDir": ".",
-
     // pnpm compatibility
     "preserveSymlinks": true,
-
     // importing json happens more often than you think
     "resolveJsonModule": true,
-
     // don't try to check for errors on imported libs
     "skipLibCheck": true,
-
     // react
     "jsx": "preserve",
-
     // next
     // testing library will break in next without it
-    "plugins": [{ "name": "next" }],
-    "types": ["@testing-library/jest-dom"]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "types": ["@testing-library/jest-dom"],
+    "incremental": true
   },
-
   // also for next
   "include": [
     "./*.config.js",
@@ -66,6 +63,5 @@
     "./test/**/*.ts",
     "./test/**/*.tsx"
   ],
-
   "exclude": ["node_modules", "build", "coverage", "dist"]
 }
