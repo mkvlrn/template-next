@@ -1,9 +1,13 @@
 import react from "@vitejs/plugin-react-swc";
-import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  resolve: {
+    conditions: ["default"],
+  },
+
+  plugins: [react()],
+
   test: {
     include: ["./src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
@@ -12,8 +16,6 @@ export default defineConfig({
       all: true,
       clean: true,
       cleanOnRerun: true,
-      reportsDirectory: "coverage",
-      reporter: ["lcov", "html", "text"],
       include: ["src"],
       exclude: ["src/**/*.test.{ts,tsx}", "src/main.{ts,tsx}"],
     },

@@ -1,6 +1,6 @@
+import RootLayout from "#app/layout.tsx";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
-import RootLayout from "~/app/layout";
 
 vi.mock("next/font/google", () => ({
   // biome-ignore lint/style/useNamingConvention: comes from google fonts
