@@ -65,7 +65,7 @@
     },
 
     {
-      // nest-y behavior from nest, but it's their standard
+      // uncultured behavior from next, but it's their standard
       "includes": ["**/*.tsx"],
       "linter": {
         "rules": {
