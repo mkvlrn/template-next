@@ -43,7 +43,8 @@
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "types": ["@testing-library/jest-dom"],
-    "incremental": true
+    "incremental": true,
+    "tsBuildInfoFile": "./build/.tsbuildinfo"
   },
 
   // also for next
@@ -51,6 +52,7 @@
     "./*.config.ts",
     ".next/types/**/*.ts",
     "./build/types/**/*.ts",
+    "./css.d.ts",
     "./next-env.d.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",

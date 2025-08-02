@@ -51,7 +51,7 @@
     {
       // test files, config files, and some scripts
       // export defaults from them, and also import from node
-      "includes": ["**/*.config.ts", "**/*.config.mjs", "**/*.test.ts"],
+      "includes": ["**/*.config.ts", "**/*.config.mjs", "**/*.test.ts", "**/*.d.ts"],
       "linter": {
         "rules": {
           "correctness": {
