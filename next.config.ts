@@ -5,4 +5,5 @@ export default {
   cleanDistDir: true,
   reactStrictMode: true,
   output: "standalone",
+  allowedDevOrigins: ["*"],
 } satisfies NextConfig;
