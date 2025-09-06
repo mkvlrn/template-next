@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/style/useNamingConvention: wonky font construct with wonky names */
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import RootLayout from "#/app/layout";
+import RootLayout from "./layout.tsx";
 
 vi.mock("next/font/google", () => ({
   Geist: () => ({ className: "mocked-geist" }),

@@ -1,16 +1,10 @@
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   base: "https://mkvlrn.github.io/template-next/",
 
-  plugins: [
-    // parse jsx
-    react(),
-    // resolve tsconfig path aliases
-    tsconfigPaths(),
-  ],
+  plugins: [react()],
 
   test: {
     include: ["src/**/*.test.{ts,tsx}"],

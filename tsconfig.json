@@ -1,15 +1,8 @@
 {
   "extends": ["@mkvlrn/config/tsconfig-next"],
   "compilerOptions": {
-    // no transpiling
-    "noEmit": true,
-
-    // paths
-    "baseUrl": ".",
-    "paths": {
-      "#/*": ["./src/*"],
-      "next/*": ["./node_modules/next/*"]
-    }
+    "module": "esnext",
+    "moduleResolution": "bundler"
   },
 
   // also for next
