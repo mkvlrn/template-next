@@ -2,7 +2,8 @@
   "extends": ["@mkvlrn/config/tsconfig-next"],
   "compilerOptions": {
     "module": "esnext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "noEmit": true
   },
 
   // also for next
