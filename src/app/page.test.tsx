@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Home from "./page.tsx";
+import Home from "#/app/page";
 
-const REGEX_HOME = /get started by editing/i;
+const REGEX_HOME = /To get started, edit the page.tsx file/i;
 
 describe("Home", () => {
   it("Home component renders correctly", () => {

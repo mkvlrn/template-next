@@ -1,34 +1,26 @@
-import process from "node:process";
 import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
-function getConfig() {
-  const testFiles = ["./src/**/*.{test,spec}.{ts,tsx}"];
-  if (process.env["E2E"] === "true") {
-    testFiles.push("./e2e/**/*.{test,spec}.{ts,tsx}");
-  }
+export default defineConfig({
+  plugins: [react(), tsconfigPaths()],
 
-  return defineConfig({
-    plugins: [react()],
-
-    test: {
-      include: testFiles,
-      reporters: ["verbose"],
-      watch: false,
-      coverage: {
-        all: true,
-        clean: true,
-        cleanOnRerun: true,
-        include: ["src"],
-        exclude: ["**/*.{test,spec}.{ts,tsx}"],
-      },
-      // biome-ignore lint/style/useNamingConvention: needed for vitest
-      env: { NODE_ENV: "test" },
-      environment: "jsdom",
-      passWithNoTests: true,
-      setupFiles: ["./vitest.setup.ts"],
+  test: {
+    include: ["**/**/*.{test,spec}.{ts,tsx}"],
+    exclude: ["node_modules"],
+    reporters: ["verbose"],
+    watch: false,
+    coverage: {
+      // all: true,
+      clean: true,
+      cleanOnRerun: true,
+      include: ["src"],
+      exclude: ["**/*.{test,spec}.{ts,tsx}", "src/main.tsx", "src/generated"],
     },
-  });
-}
-
-export default getConfig();
+    // biome-ignore lint/style/useNamingConvention: needed for vitest
+    env: { NODE_ENV: "test" },
+    environment: "jsdom",
+    passWithNoTests: true,
+    setupFiles: ["./vitest.setup.ts"],
+  },
+});

@@ -1,9 +1,114 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "root": true,
-  "extends": ["@mkvlrn/config/biome-next"],
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*", "!**/node_modules/**/*", "!**/build/**/*", "!**/coverage/**/*"]
-  }
+    "includes": [
+      "**/*",
+      "!**/node_modules/**/*",
+      "!**/build/**/*",
+      "!**/coverage/**/*",
+      "!**/*.d.ts",
+      "!**/generated/*"
+    ]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "domains": {
+      "project": "all",
+      "test": "all",
+      "react": "all",
+      "next": "all",
+      "solid": "none",
+      "qwik": "none"
+    },
+    "enabled": true,
+    "rules": {
+      "a11y": "on",
+      "complexity": "on",
+      "correctness": "on",
+      "nursery": "off",
+      "performance": "on",
+      "security": "on",
+      "style": "on",
+      "suspicious": "on"
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            // because of typescript's noPropertyAccessFromIndexSignature
+            "useLiteralKeys": "off"
+          }
+        }
+      }
+    },
+
+    {
+      // config files should be able to export defaults as per tooling requirements
+      // and do default exports
+      "includes": ["**/*.config.{ts,mjs}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNodejsModules": "off"
+          },
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+
+    {
+      "includes": ["src/routes/**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            // for tanstack router file based routes
+            "useComponentExportOnlyModules": "off",
+            "useExportsLast": "off"
+          }
+        }
+      }
+    },
+
+    {
+      // uncultured behavior from next, but it's their standard
+      "includes": ["**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off",
+            "useComponentExportOnlyModules": {
+              "level": "warn",
+              "options": {
+                "allowExportNames": ["metadata"]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }
